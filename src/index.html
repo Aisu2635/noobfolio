@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Background with Password Input</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: rgb(0, 255, 21);
+      font-size: 24px;
+    }
+
+    #password-input {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="video-background">
+    <source src="/src/matrix.mp4" type="video/mp4">
+    <!-- Add additional source elements for other video formats like WebM, Ogg if necessary -->
+  </video>
+
+  <div id="content">
+    <div>
+      SAY MY NAME
+    </div>
+    <input type="password" id="password-input" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+    <div id="message">You are goddamn wrong</div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var passwordInput = document.getElementById("password-input");
+      var password = passwordInput.value.toLowerCase(); // Convert input to lowercase for case-insensitivity
+
+      if (password === "om" || password === "OM") {
+        window.location.href = "cv.html";
+      } else {
+        var messageElement = document.getElementById("message");
+        messageElement.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
