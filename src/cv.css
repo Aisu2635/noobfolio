@@ -247,7 +247,7 @@ strong,span{
     flex: 1;
     padding: 15px 30px 30px 30px;
     flex-direction: row;
-    margin-right: 100px;
+   /* margin-right: 100px; */
 }
 
 .card-edu > .right > p {
