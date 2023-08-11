@@ -276,7 +276,6 @@ strong,span{
     color: #0e141e;
 }
 
-/* Skill Bar Styles */
 .skill-bar {
     width: 100%;
     height: 10px;
@@ -296,11 +295,10 @@ strong,span{
 }
 
 .fill-rect {
-    fill: #007bff; /* Change the color as desired */
+    fill: #007bff;
     rx: 5;
     transition: width 0.5s;
 }
-/* Bullet List Styles */
 .bullet-list {
     list-style-type: disc;
     margin-top: 0;
